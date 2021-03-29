@@ -326,6 +326,10 @@ footer .icons svg {
   .mobile-friendly {
     width: 100%;
   }
+
+  footer .col-lg img {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 992px) {
