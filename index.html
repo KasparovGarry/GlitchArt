@@ -11,8 +11,8 @@
     <!--Boostrap import-->
     <link
       rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
       crossorigin="anonymous"
     />
 
@@ -27,22 +27,22 @@
     <!-- Styles import -->
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
+  <body id="top">
     <header id="navbar">
       <nav>
         <a href="/" class="logo">GlitchArt</a>
         <ul class="navlinks">
           <li class="navlink">
-            <a href="">Home</a>
+            <a href="#home">Home</a>
           </li>
           <li class="navlink">
-            <a href="">About</a>
+            <a href="#about">About</a>
           </li>
           <li class="navlink">
-            <a href="">Works</a>
+            <a href="#works">Works</a>
           </li>
           <li class="navlink">
-            <a href="">Contacts</a>
+            <a href="#contacts">Contacts</a>
           </li>
         </ul>
         <div class="burger">
@@ -55,7 +55,7 @@
     </header>
 
     <main>
-      <section class="section welcome-section">
+      <section class="section welcome-section" id="home">
         <div class="container">
           <div class="row">
             <div class="col-lg">
@@ -63,13 +63,17 @@
               <span>Here you will find all the necessary information</span>
             </div>
             <div class="col-lg">
-              <img src="./images/app_development_1.png" alt="Picture1" />
+              <img
+                class="mobile-friendly"
+                src="./images/app_development_1.png"
+                alt="Picture1"
+              />
             </div>
           </div>
         </div>
       </section>
 
-      <section class="section about-section">
+      <section class="section about-section" id="about">
         <div class="container">
           <h1>About</h1>
           <div class="row">
@@ -86,6 +90,7 @@
             </div>
             <div class="col-lg">
               <img
+                class="mobile-friendly"
                 src="./images/Data_organization_Monochromatic.png"
                 alt="Picture 2"
               />
@@ -94,27 +99,55 @@
         </div>
       </section>
 
-      <section class="section works-section">
+      <section class="section works-section" id="works">
         <div class="container">
           <h1>Works</h1>
-          <div class="row first-row">
-            <div class="col-lg">
-              <img src="./images/artworks/image_1.png" alt="" />
+          <div id="works-mobileFriendly-grid">
+            <div class="row first-row">
+              <div class="col-lg">
+                <img src="./images/artworks/image_1.png" alt="" />
+              </div>
+              <div class="col-lg">
+                <img src="./images/artworks/image_3.png" alt="" />
+              </div>
+              <div class="col-lg">
+                <img src="./images/artworks/image_5.png" alt="" />
+              </div>
             </div>
-            <div class="col-lg">
-              <img src="./images/artworks/image_3.png" alt="" />
-            </div>
-            <div class="col-lg">
-              <img src="./images/artworks/image_5.png" alt="" />
+
+            <div class="row second-row">
+              <div class="col-lg">
+                <img src="./images/artworks/image_2.png" alt="" />
+              </div>
+              <div class="col-lg">
+                <img src="./images/artworks/image_4.png" alt="" />
+              </div>
             </div>
           </div>
 
-          <div class="row second-row">
-            <div class="col-lg">
-              <img src="./images/artworks/image_2.png" alt="" />
-            </div>
-            <div class="col-lg">
-              <img src="./images/artworks/image_4.png" alt="" />
+          <div
+            id="works-mobileFriendly-slideshow"
+            class="carousel slide carousel-fade"
+            data-ride="carousel"
+            data-interval="3500"
+            data-pause="false"
+          >
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img class="w-100" src="./images/artworks/image_1.png" alt="" />
+              </div>
+              <div class="carousel-item">
+                <img class="w-100" src="./images/artworks/image_2.png" alt="" />
+              </div>
+              <div class="carousel-item">
+                <img class="w-100" src="./images/artworks/image_3.png" alt="" />
+              </div>
+              <div class="carousel-item">
+                <img class="w-100" src="./images/artworks/image_4.png" alt="" />
+              </div>
+              <div class="carousel-item">
+                <img class="w-100" src="./images/artworks/image_5.png" alt="" />
+              </div>
             </div>
           </div>
         </div>
@@ -122,19 +155,66 @@
     </main>
 
     <footer>
-      <div class="container">
+      <div class="container" id="contacts">
         <div class="row">
           <div class="col-lg">
             <div class="footer-info">
               <h2>Contacts</h2>
               <span class="mail">Email: glitchart@mail.com</span>
               <span class="phone">TEL: +374 93 000 000</span>
-              <img src="" alt="" class="icons" />
+              <div class="icons">
+                <a href="https://www.facebook.com">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    version="1.1"
+                    id="facebook-icon"
+                    x="0px"
+                    y="0px"
+                    viewBox="0 0 155.139 155.139"
+                    xml:space="preserve"
+                  >
+                    <path
+                      d="M89.584,155.139V84.378h23.742l3.562-27.585H89.584V39.184   c0-7.984,2.208-13.425,13.67-13.425l14.595-0.006V1.08C115.325,0.752,106.661,0,96.577,0C75.52,0,61.104,12.853,61.104,36.452   v20.341H37.29v27.585h23.814v70.761H89.584z"
+                    />
+                  </svg>
+                </a>
+                <a href="https://www.twitter.com">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    version="1.1"
+                    id="twitter-icon"
+                    viewBox="0 0 512 512"
+                    xml:space="preserve"
+                  >
+                    <path
+                      d="M512,97.248c-19.04,8.352-39.328,13.888-60.48,16.576c21.76-12.992,38.368-33.408,46.176-58.016    c-20.288,12.096-42.688,20.64-66.56,25.408C411.872,60.704,384.416,48,354.464,48c-58.112,0-104.896,47.168-104.896,104.992    c0,8.32,0.704,16.32,2.432,23.936c-87.264-4.256-164.48-46.08-216.352-109.792c-9.056,15.712-14.368,33.696-14.368,53.056    c0,36.352,18.72,68.576,46.624,87.232c-16.864-0.32-33.408-5.216-47.424-12.928c0,0.32,0,0.736,0,1.152    c0,51.008,36.384,93.376,84.096,103.136c-8.544,2.336-17.856,3.456-27.52,3.456c-6.72,0-13.504-0.384-19.872-1.792    c13.6,41.568,52.192,72.128,98.08,73.12c-35.712,27.936-81.056,44.768-130.144,44.768c-8.608,0-16.864-0.384-25.12-1.44    C46.496,446.88,101.6,464,161.024,464c193.152,0,298.752-160,298.752-298.688c0-4.64-0.16-9.12-0.384-13.568    C480.224,136.96,497.728,118.496,512,97.248z"
+                    />
+                  </svg>
+                </a>
+                <a href="https://www.instagram.com">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    enable-background="new 0 0 24 24"
+                    viewBox="0 0 24 24"
+                    id="instagram-icon"
+                  >
+                    <path
+                      d="m12.004 5.838c-3.403 0-6.158 2.758-6.158 6.158 0 3.403 2.758 6.158 6.158 6.158 3.403 0 6.158-2.758 6.158-6.158 0-3.403-2.758-6.158-6.158-6.158zm0 10.155c-2.209 0-3.997-1.789-3.997-3.997s1.789-3.997 3.997-3.997 3.997 1.789 3.997 3.997c.001 2.208-1.788 3.997-3.997 3.997z"
+                    />
+                    <path
+                      d="m16.948.076c-2.208-.103-7.677-.098-9.887 0-1.942.091-3.655.56-5.036 1.941-2.308 2.308-2.013 5.418-2.013 9.979 0 4.668-.26 7.706 2.013 9.979 2.317 2.316 5.472 2.013 9.979 2.013 4.624 0 6.22.003 7.855-.63 2.223-.863 3.901-2.85 4.065-6.419.104-2.209.098-7.677 0-9.887-.198-4.213-2.459-6.768-6.976-6.976zm3.495 20.372c-1.513 1.513-3.612 1.378-8.468 1.378-5 0-7.005.074-8.468-1.393-1.685-1.677-1.38-4.37-1.38-8.453 0-5.525-.567-9.504 4.978-9.788 1.274-.045 1.649-.06 4.856-.06l.045.03c5.329 0 9.51-.558 9.761 4.986.057 1.265.07 1.645.07 4.847-.001 4.942.093 6.959-1.394 8.453z"
+                    />
+                    <circle cx="18.406" cy="5.595" r="1.439" />
+                  </svg>
+                </a>
+              </div>
             </div>
           </div>
           <div class="col-lg">
             <img
-              class="decoration"
+              class="mobile-friendly"
               src="./images/Social_media_adv_1.png"
               alt=""
             />
@@ -143,12 +223,37 @@
       </div>
     </footer>
 
+    <a href="#top" class="go-up-button">
+      <svg
+        data-prefix="fas"
+        data-icon="chevron-down"
+        role="img"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 448 512"
+        class="chevron"
+      >
+        <path
+          d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
+          class=""
+        ></path>
+      </svg>
+    </a>
+
     <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
       crossorigin="anonymous"
     ></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"
+    ></script>
     <script type="text/javascript" src="script.js"></script>
   </body>
 </html>

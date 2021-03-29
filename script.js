@@ -26,3 +26,7 @@ const navSlide = () => {
 };
 
 navSlide();
+
+$(window).scroll(function () {
+  $(".go-up-button").toggleClass("scrolled", $(this).scrollTop() > 0);
+});
